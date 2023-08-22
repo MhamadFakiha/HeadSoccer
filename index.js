@@ -44,6 +44,44 @@ function enemydokick(){
 let playerkick = false;
 let enemykick = false;
 
+const dbt = document.getElementById('dbt');
+dbt.addEventListener('touchstart', function() {
+        player.pressed['right'] = true
+        player.last_key = 'right'
+})
+document.addEventListener('touchend', function() {
+    player.pressed['right'] = false
+    player.last_key = 'left'
+});
+
+const sbt = document.getElementById('sbt');
+sbt.addEventListener('touchstart', function() {
+    player.pressed['kick'] = true;
+    playerkick = true;
+})
+document.addEventListener('touchend', function() {
+    player.pressed['kick'] = false;
+    playerkick = false;
+});
+
+const abt = document.getElementById('abt');
+abt.addEventListener('touchstart', function() {
+    player.pressed['left'] = true;
+    player.last_key = 'left'
+})
+document.addEventListener('touchend', function() {
+    player.pressed['left'] = false;
+    player.last_key = 'right'
+});
+
+const wbt = document.getElementById('wbt');
+wbt.addEventListener('touchstart', function() {
+    player.pressed['up'] = true;
+})
+document.addEventListener('touchend', function() {
+    player.pressed['up'] = false;
+});
+
 window.addEventListener('keydown',(event)=>{
     switch (event.key){
         case 'd':

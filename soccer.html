@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Head Soccer</title>
+    <link rel="stylesheet" type="text/css" href="soccer.css">
+</head>
+
+<body>
+    <div class="record">
+        <div class="result" id="player">0</div>
+        <div class="timer" id="timer">60</div>
+        <div class="result" id="enemy">0</div>
+    </div>
+    <div>
+        <div class="end" id="end"></div>
+        <div class = 'endbt'>
+        <a id="return" href="index.html">Home</a>
+        <a id="again" href="soccer.html">Play Again</a>
+    </div>
+        <div class="goal" id="goal">
+            <span style="--i:1">G</span>
+            <span style="--i:2">O</span>
+            <span style="--i:3">A</span>
+            <span style="--i:4">A</span>
+            <span style="--i:5">A</span>
+            <span style="--i:6">L</span>
+        </div>
+        <div class="postgame">
+
+            <div class="chooseplayer">
+                <h1>Player 1</h1>
+                <div class='heroes'>
+                    <div class="hero">
+                        <input type="radio" name="selectedHero" value="modric" id="modric" checked>
+                        <img src='Media/modricleft.png'>
+                        <span class="heroname">Modric</span>
+                    </div>
+                    <div class="hero">
+                        <input type="radio" name="selectedHero" value="ronaldo" id="ronaldo" >
+                        <img src='Media/ronaldoleft.png'>
+                        <span class="heroname">Ronaldo</span>
+                    </div>
+                    <div class="hero">
+                        <input type="radio" name="selectedHero" value="benzema" id="benzema" >
+                        <img src='Media/benzemaleft.png'>
+                        <span class="heroname">Benzema</span></div>
+                    <div class="hero">
+                        <input type="radio" name="selectedHero" value="busq" id="busq" >
+                        <img src='Media/busqleft.png'>
+                        <span class="heroname">Busquets</span></div>
+                    <div class="hero">
+                        <input type="radio" name="selectedHero" value="messi" id="messi" >
+                        <img src='Media/messileft.png'>
+                        <span class="heroname">Messi</span></div>
+                    <div class="hero">
+                        <input type="radio" name="selectedHero" value="pique" id="pique" >
+                        <img src='Media/piqueleft.png'>
+                        <span class="heroname">Pique</span></div>
+                </div>
+            </div>
+            <button id="play">Start</button>
+            <div class="chooseplayer">
+                <h1 class="secondh1">Player 2</h1>
+            <div class='heroes'>
+                <div class="hero">
+                    <input type="radio" name="selectedHero*" value="modric" id="_modric" checked>
+                    <img src='Media/modricright.png'>
+                    <span class="heroname">Modric</span>
+                </div>
+                <div class="hero">
+                    <input type="radio" name="selectedHero*" value="ronaldo" id="_ronaldo" >
+                    <img src='Media/ronaldoright.png'>
+                    <span class="heroname">Ronaldo</span>
+                </div>
+                <div class="hero">
+                    <input type="radio" name="selectedHero*" value="benzema" id="_benzema" >
+                    <img src='Media/benzemaright.png'>
+                    <span class="heroname">Benzema</span></div>
+                <div class="hero">
+                    <input type="radio" name="selectedHero*" value="busq" id="_busq" >
+                    <img src='Media/busqright.png'>
+                    <span class="heroname">Busquets</span></div>
+                <div class="hero">
+                    <input type="radio" name="selectedHero*" value="messi" id="_messi" >
+                    <img src='Media/messiright.png'>
+                    <span class="heroname">Messi</span></div>
+                <div class="hero">
+                    <input type="radio" name="selectedHero*" value="pique" id="_pique" >
+                    <img src='Media/piqueright.png'>
+                    <span class="heroname">Pique</span></div>
+            </div>
+            </div>
+        </div>
+        <span id="player1" style="display: none;"></span>
+        <span id="player2" style="display: none;"></span>
+        
+        <canvas></canvas>
+        <script src="index.js" type="module"></script>
+        <script src="postgame.js" type="module"></script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="index.css" type="text/css" rel="stylesheet">
+    <link href="leaderboard.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="leaderboard.html">Leaderboard</a>
+        <a href="soccer.html">Head Soccer</a>
+    </nav>
+    <div class="container">
+    <table id="resultsTable">
+        <tr>
+            <th style="color: blue;">Player 1</th>
+            <th>Player 1 Score</th>
+            <th>Player 2 Score</th>
+            <th style="color: red;">Player 2</th>
+        </tr>
+        <script>
+            var matchResults = JSON.parse(localStorage.getItem('matchResults')) || [];
+            for (var i = 0; i < matchResults.length; i++) {
+                var result = matchResults[i];
+                var newRow = document.createElement('tr');
+                newRow.innerHTML = '<td>' + result.player1 + '</td><td>' + result.scores.player1 + '</td><td>' + result.scores.player2 + '</td><td>' + result.player2+'</td>';
+                document.querySelector('table').appendChild(newRow);
+            }
+        </script>
+    </table>
+    <button onclick="clearTable()">Clear</button>
+    </div>
+
+   
+    <script>
+        function clearTable() {
+            var table = document.getElementById('resultsTable');
+            while (table.rows.length > 1) {
+                table.deleteRow(1); // Delete rows starting from the second row (index 1)
+            }
+            localStorage.removeItem('matchResults');
+        }
+    </script>
+</body>
+</html>

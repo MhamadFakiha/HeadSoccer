@@ -29,6 +29,11 @@ play.onclick = function(){
     document.getElementById('player2').innerHTML = document.querySelector('input[name="selectedHero*"]:checked').value;
     images();
     document.getElementsByClassName('postgame')[0].style.display='none';
+    document.getElementsByClassName('btncont')[0].style.display='flex';
+    document.getElementsByClassName('btncont')[1].style.display='flex';
+    document.getElementsByClassName('btncont')[2].style.display='flex';
+    document.getElementsByClassName('btncont')[3].style.display='flex';
+    
     animate();
 
 }

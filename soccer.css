@@ -241,7 +241,7 @@ a{
 /*Phone buttos */
 
 .btncont{
-  display: flex;
+  display: none;
   position:absolute;
   bottom: 40vh;
 }

@@ -44,6 +44,8 @@ function enemydokick(){
 let playerkick = false;
 let enemykick = false;
 
+
+//player1 mobile
 const dbt = document.getElementById('dbt');
 dbt.addEventListener('touchstart', function() {
         player.pressed['right'] = true
@@ -81,6 +83,48 @@ wbt.addEventListener('touchstart', function() {
 document.addEventListener('touchend', function() {
     player.pressed['up'] = false;
 });
+
+
+//player2 mobile
+const dbts = document.getElementById('dbts');
+dbts.addEventListener('touchstart', function() {
+        enemy.pressed['right'] = true
+        enemy.last_key = 'right'
+})
+document.addEventListener('touchend', function() {
+    enemy.pressed['right'] = false
+    enemy.last_key = 'left'
+});
+
+const sbts = document.getElementById('sbts');
+sbts.addEventListener('touchstart', function() {
+    enemy.pressed['kick'] = true;
+    enemykick = true;
+})
+document.addEventListener('touchend', function() {
+    enemy.pressed['kick'] = false;
+    enemykick = false;
+});
+
+const abts = document.getElementById('abts');
+abts.addEventListener('touchstart', function() {
+    enemy.pressed['left'] = true;
+    enemy.last_key = 'left'
+})
+document.addEventListener('touchend', function() {
+    enemy.pressed['left'] = false;
+    enemy.last_key = 'right'
+});
+
+const wbts = document.getElementById('wbts');
+wbts.addEventListener('touchstart', function() {
+    enemy.pressed['up'] = true;
+})
+document.addEventListener('touchend', function() {
+    enemy.pressed['up'] = false;
+});
+
+
 
 window.addEventListener('keydown',(event)=>{
     switch (event.key){

@@ -237,3 +237,26 @@ a{
   align-items: center;
   justify-content: space-around;
 }
+
+/*Phone buttos */
+
+.btncont{
+  display: flex;
+  position:absolute;
+  bottom: 40vh;
+}
+.btns{
+  margin: 2vh;
+  width: 6vw;
+  height: fit-content;
+  padding: 3vh;
+  bottom:50vh;
+  left: 6vw;
+  background: rgb(205, 205, 79) !important;
+}
+.first{
+  bottom: 55vh;
+}
+.scplayer{
+  right: 0;
+}

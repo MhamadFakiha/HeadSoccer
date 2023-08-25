@@ -6,6 +6,8 @@ import { respown } from "./index.js";
 let player_score = document.getElementById('player');
 let enemy_score = document.getElementById('enemy');
 let goal_text = document.getElementById('goal');
+let audio = document.getElementById('GoalAudio');
+let backaudio = document.getElementById('myAudio');
 
 export class Ball {
     constructor(c) {
@@ -53,6 +55,8 @@ export class Ball {
                 goal_text.style.display = 'block'
                 this.goal = true;
                 enemy_score.innerHTML = parseInt(enemy_score.innerHTML) + 1;
+                audio.play();
+                backaudio.volume=0.3;
             }
         }
         if(this.x + this.radius > c.canvas.width*(1-1/10)){
@@ -72,6 +76,8 @@ export class Ball {
                 goal_text.style.display = 'block'
                 this.goal = true;
                 player_score.innerHTML = parseInt(player_score.innerHTML) + 1;
+                audio.play();
+                backaudio.volume=0.3;
             }
         }
 

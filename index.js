@@ -22,6 +22,8 @@ window.addEventListener('resize',resize_window)
 
 
 export function respown(){
+    let backaudio = document.getElementById('myAudio');
+    backaudio.volume=1;
     ball = new Ball(c) 
     player = new Player(canvas.width/10+canvas.height/13,canvas.height*(1-1/10),canvas.height/13,'','')
     enemy = new Player(canvas.width-canvas.width/10-canvas.height/10,canvas.height*(1-1/10),canvas.height/13,'','')
@@ -227,7 +229,6 @@ let end = document.getElementById("end")
 export function animate(timestamp){
     animationId = requestAnimationFrame(animate)
     c.clearRect(0,0,window.innerWidth,window.innerHeight)
-
     if (!startTime) {
         startTime = timestamp;
     }
@@ -274,7 +275,8 @@ export function animate(timestamp){
     canvas.width/10,canvas.height/2.8)
     c.drawImage(leftgoal,0,canvas.height-canvas.height/2.8,
     canvas.width/10 ,canvas.height/2.8)
-
+    
+    
         }
 //animate();
 

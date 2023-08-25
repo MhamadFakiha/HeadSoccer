@@ -22,6 +22,9 @@ for(let i=0;i<players.length;i++){
         selectRadio(_players[i])};
 }
 
+var audio = document.getElementById('myAudio');
+audio.play()
+
 
 var play = document.getElementById('play')
 play.onclick = function(){
@@ -33,7 +36,6 @@ play.onclick = function(){
     document.getElementsByClassName('btncont')[1].style.display='flex';
     document.getElementsByClassName('btncont')[2].style.display='flex';
     document.getElementsByClassName('btncont')[3].style.display='flex';
-    
     animate();
 
 }
